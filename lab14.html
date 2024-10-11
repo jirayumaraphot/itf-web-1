@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+
+    </div>
+    <h1 id="username">Username</h1>
+    <div id="proflie" style="position: relative; height: 300px; width: 300px; background-image: url(https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); background-position: center; border-radius: 100%;">
+        <div style="position: absolute; bottom: 0; right: 5px; height: 100px; width: 100px; background-color: red; border-radius: 50%; display: flex; justify-content: center; align-items: center;"><p>1</p></div>
+    </div>
+    <label for="">Set username</label>
+    <input type="text" placeholder="Enter" id="input"><button onclick="setUsername()">Set</button>
+    <label for="">Set proflie</label>
+    <input type="text" placeholder="Enter" id="input"><button onclick="setproflie()">Set</button>
+    <script>
+        const username = document.getElementById("username");
+        const input = document.getElementById("input");
+        const proflie = document.getElementById("proflie");
+        username.textContent = "Hello";
+
+        function setUsername(){
+            console.log(input.value);
+            username.textContent = input.value;
+        };
+        function setproflie(){
+            proflie.style.backgroundImage = "url(" + input.value + ")"
+        };
+        function createelement(){
+            const a = document.createelement("p");
+            a.textContent = "Hi";
+            document.getElementById("parent").appendChild(a);
+
+        }
+    </script>
+</body>
+</html>
